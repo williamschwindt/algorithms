@@ -2,21 +2,33 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def product_of_all_other_numbers(arr):
-    #keep track of the products
-    new_arr = []
-    #loop through array
-    for i in range(0, len(arr)):
-        #reset the product after every outside loop iteration
-        product = -1
-        #loop through again
-        for j in range(0, len(arr)):
-            #calculate product
-            product = product * arr[j] 
-        #divide the total product by arr[i] and * -1 
-        new_arr.append((product * -1) / arr[i])
+# def product_of_all_other_numbers(arr):
+#     #keep track of the products
+#     new_arr = []
+#     #loop through array
+#     for i in range(0, len(arr)):
+#         #reset the product after every outside loop iteration
+#         product = 1
+#         #loop through again
+#         for j in range(0, len(arr)):
+#             #calculate product
+#             product = product * arr[j] 
+#         #divide the total product by arr[i]
+#         new_arr.append(product / arr[i])
 
-    return new_arr
+#     return new_arr
+
+def product_of_all_other_numbers(arr):
+    returned_arr = [0 for num in arr]
+    product = 1
+
+    for num in arr:
+        product = (product * num)
+    
+    for i in range(0, len(arr)):
+        returned_arr[i] = product / arr[i]
+
+    return returned_arr
 
 arr = [1, 2, 3, 4, 5]
 print(product_of_all_other_numbers(arr))
