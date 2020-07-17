@@ -17,11 +17,11 @@ Returns: an integer
 #             return i
 
 
-#O(n)
+O(n)
 def single_number(arr):
     #create a cache
     count_cache = {}
-    #loop over and insert the count of each number into the cache
+    #loop over and insert the count of each number into the cache 
     for num in arr:
         if num in count_cache:
             count_cache[num] += 1

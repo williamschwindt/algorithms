@@ -12,7 +12,7 @@ def moving_zeroes(arr):
     #     if arr[i] == 0:
     #         arr.append(0)
     #         #add index to array
-    #         indexes.append(i)
+    #         indexes.append(i) 
 
     # for index in indexes:
     #     arr[index] = ''
